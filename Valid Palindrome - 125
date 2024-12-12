@@ -1,0 +1,17 @@
+class Solution {
+    public boolean isPalindrome(String s) {
+        String original=s.replaceAll("[^A-Za-z0-9]","").toLowerCase();
+        int low=0,flag=1;
+        int high=original.length()-1;
+        while(low<high)
+        {
+            if(original.charAt(low) != original.charAt(high))
+            {
+               return false;
+            }
+            low++;
+            high--;
+        }
+        return true;
+    }
+}
